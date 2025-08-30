@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyurPulse - Ayurvedic Health Monitoring</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-amber-50 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden w-full max-w-4xl relative">
+    
+    <!-- Decorative Ayurvedic Plant Images -->
+    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/ayurveda-1574430_1280.jpg" 
+         class="absolute top-4 right-4 w-20 h-20 rounded-full opacity-30" alt="Ayurveda">
+    <img src="https://cdn.pixabay.com/photo/2018/05/17/10/24/ayurveda-3401430_1280.jpg" 
+         class="absolute bottom-6 left-4 w-24 h-24 rounded-xl opacity-20" alt="Plants">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-green-600 to-emerald-800 p-6 text-white flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Custom Ayurvedic Doctor Logo -->
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" 
+             alt="Ayurvedic Doctor Logo" 
+             class="w-12 h-12 rounded-full border-2 border-white shadow">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold">AyurPulse</h1>
+          <p class="text-emerald-100 mt-1">Ancient Wisdom Meets Modern Health Monitoring</p>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="flex items-center gap-2 bg-white/20 p-2 rounded-full">
+          <div class="h-3 w-3 bg-green-400 rounded-full pulse-animation"></div>
+          <span class="text-xs font-medium">Live Monitoring</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="p-6 grid md:grid-cols-2 gap-6">
+      
+      <!-- Dosha Readings -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-bold text-gray-700 mb-2">Dosha Readings</h2>
+        
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-lg shadow">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-amber-700">Vata</span>
+            <span class="text-gray-600" id="vata-bpm">72 bpm</span>
+          </div>
+          <div class="dosha-gauge">
+            <div class="gauge-fill bg-amber-500" id="vata-gauge" style="width:72%"></div>
+          </div>
+        </div>
+
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg shadow">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-red-700">Pitta</span>
+            <span class="text-gray-600" id="pitta-bpm">68 bpm</span>
+          </div>
+          <div class="dosha-gauge">
+            <div class="gauge-fill bg-red-500" id="pitta-gauge" style="width:68%"></div>
+          </div>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg shadow">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-green-700">Kapha</span>
+            <span class="text-gray-600" id="kapha-bpm">75 bpm</span>
+          </div>
+          <div class="dosha-gauge">
+            <div class="gauge-fill bg-green-500" id="kapha-gauge" style="width:75%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Health Metrics -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-bold text-gray-700 mb-2">Health Metrics</h2>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow flex justify-between items-center">
+          <span class="font-semibold text-blue-700">Temperature</span>
+          <span class="text-gray-600" id="temperature">98.6 °F</span>
+        </div>
+
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-lg shadow flex justify-between items-center">
+          <span class="font-semibold text-purple-700">GPS Location</span>
+          <span class="text-gray-600" id="gps">17.6868° N, 83.2185° E</span>
+        </div>
+
+        <div class="bg-teal-50 border-l-4 border-teal-500 p-4 rounded-lg shadow flex justify-between items-center">
+          <span class="font-semibold text-teal-700">Health Status</span>
+          <span class="text-green-600 font-bold" id="status">Balanced</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-100 text-center p-4 text-sm text-gray-600">
+      &copy; 2025 AyurPulse. Guided by Ancient Ayurveda, Powered by Modern Tech.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
